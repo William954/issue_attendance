@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_no_approval_user_logged_no_approval_user_logged,no_approval_user_logged.no_approval_user_logged,model_no_approval_user_logged_no_approval_user_logged,,1,0,0,0

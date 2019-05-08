@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+      <record id="inherit_field_hrleave_logged" model="ir.ui.view">
+              <field name="name">inherit.field.logged.leave</field>
+              <field name="model">hr.leave</field>
+              <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+              <field name="arch" type="xml">
+                <xpath expr="//field[@name='holiday_status_id']" position="after">
+                    <field name="user_logged_id"/>
+                    <field name="logged_id"/>
+                </xpath>
+                <xpath expr="//button[@string='Aprobar']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('logged_id','=',True)]}</attribute>
+                </xpath>
+              </field>
+      </record>
+  </data>
+</odoo>
+
+
