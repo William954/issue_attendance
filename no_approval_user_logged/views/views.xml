@@ -9,7 +9,7 @@
                     <field name="user_logged_id"/>
                     <field name="logged_id"/>
                 </xpath>
-                <xpath expr="//button[@string='Aprobar']" position="attributes">
+                <xpath expr="//button[@name='action_approve']" position="attributes">
                     <attribute name="attrs">{'invisible':[('logged_id','=',True)]}</attribute>
                 </xpath>
               </field>
