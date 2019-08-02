@@ -10,7 +10,7 @@ class HrLeave(models.Model):
 
     @api.depends('user_logged_id','logged_id')
     def _active_id(self):
-        if self.env.user == self.user_logged_id:
+        if self.env.user.employee_ids.id == self.employee_id:
             self.logged_id = True
         else:
             self.logged_id = False
